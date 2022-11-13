@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+.newTaskBtn{
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+#open-modal {
+    background: rgb(37, 177, 37);
+    color: white;
+    height: 65%;
+    width: 13%;
+    margin-left: 2%;
+    border: 0;
+    border-radius: 3%;
+    font-size: 1.4rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.modal , .overlay {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    font-family: 'Oswald', sans-serif;
+}
+
+.overlay {
+    background-color: rgba(49, 49, 49, 0.8);
+}
+
+.modal-content {
+    background-color: white;
+    position: absolute;
+    top: 14%;
+    left: 32%;
+    height: 45%;
+    width: 35%;
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.24);
+    height: 15%;
+}
+
+#close-modal {
+    background-color: white;
+    border: 0;
+    margin-right: 3%;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.534);
+}
+
+p {
+    margin: 0;
+    margin-left: 4%;
+}
+
+.modal-body {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 4%;
+}
+
+#title , #description {
+    width: 92%;
+}
+
+#date , #tag {
+    width: 30%;
+}
+
+input , select{
+    height: 15%;
+    border: solid 1px rgba(0, 0, 0, 0.24);
+    padding-left: 2%;
+    margin: 1%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.modal-footer {
+    border-top: solid 1px rgba(0, 0, 0, 0.24);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 15%;
+}
+
+#cancel {
+    background-color: white;
+    border: solid 1px rgba(0, 0, 0, 0.24);
+    border-radius: 8%;
+    margin-right: 2%;
+    height: 70%;
+    width: 15%;
+}
+
+#ok {
+    background-color: rgb(0, 110, 255);
+    color: white;
+    border: 0;
+    border-radius: 8%;
+    margin-right: 2%;
+    height: 70%;
+    width: 10%;
+}
+
+:hover button {
+    cursor: pointer;
+}

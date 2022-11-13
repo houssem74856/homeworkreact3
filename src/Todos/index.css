@@ -1,0 +1,64 @@
+.todo {
+    background-color: white;
+    width: 90%;
+    border-radius: 5px;
+    padding: 4%;
+    margin-bottom: 5%;
+}
+
+.color-work , .color-study , .color-hobby {
+    height: 8px;
+    width: 30px;
+    border-radius: 4px;
+}
+
+.color-work {
+    background-color: rgb(202, 25, 202);
+}
+
+.color-study {
+    background-color: red;
+}
+
+.color-hobby {
+    background-color: aqua;
+}
+
+.todotitle {
+    margin: 0;
+    padding-bottom: 2%;
+    border-bottom: solid 2px rgba(128, 128, 128, 0.445);
+    margin-bottom: 2%;
+}
+
+.tododescription {
+    margin: 0;
+}
+
+.dateBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4%;
+}
+
+.date {
+    background-color: grey;
+    color: rgba(255, 255, 255, 0.76);
+    margin: 0;
+    font-size: small;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 2px;
+}
+
+.next ,.previous {
+    background-color: white;
+    border: 0;
+    color: blue;
+}
+
+.previous {
+    margin-left: 40%;
+}
+
