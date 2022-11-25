@@ -1,43 +1,41 @@
 import './App.css';
 import AddNewTaskBtn from './AddNewTaskBtn';
 import TodoList from './TodoList';
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useReducer} from 'react';
 import useFetch from './useFetch';
 
 function reducer(todos,action) {
-  let td = null
   switch(action.type) {
-    case "first" : return action.hou
+    case "first" : return action.data
     case "add-todo" : return [...todos,action.blog]
     case "next" :
-      todos.map(todo => {if(todo.id === action.id) {td = todo}})
-      switch(action.halo) {
-        case "todo" : 
-        td.hala = "currently"
-        return [...todos]
-        case "currently" : 
-        td.hala = "completed"
-        return [...todos]
-      }
+      return todos.map(todo => {
+        if(todo.id === action.id) {return {...todo,hala : next(todo.hala)}}
+        return todo})
     case "previous" : 
-    todos.map(todo => {if(todo.id === action.id) {td = todo}})
-    switch(action.halo) {
-      case "currently" : 
-      td.hala = "todo"
-      return [...todos]
-      case "completed" : 
-      td.hala = "currently"
-      return [...todos]
-    }
+      return todos.map(todo => {
+        if(todo.id === action.id) {return {...todo,hala : previous(todo.hala)}}
+        return todo
+    })
   }
 }
 
+function next(hala) {
+  if(hala==="todo") return "currently"
+  return "completed"
+}
+
+function previous(hala) {
+  if(hala==="completed") return "currently"
+  return "todo"
+}
+
 function App() {
-  const hou = useFetch("http://localhost:8001/todos")
+  const data = useFetch("http://localhost:8001/todos")
     const [todos,dispatch] = useReducer(reducer,undefined)
     useEffect(() => {
-      dispatch({type:"first",hou:hou})
-    },[hou])
+      dispatch({type:"first",data:data})
+    },[data])
 
   return (
     <div className="App">

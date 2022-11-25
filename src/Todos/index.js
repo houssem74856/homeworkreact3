@@ -14,8 +14,8 @@ function Todos({dispatch,todos,hala,previous,next}) {
                 <p className='tododescription'>{todo.description}</p> 
                 <div className="dateBtns">
                     <p className="date">{todo.date}</p>   
-                    {previous && <button className="previous" onClick={() => dispatch({type:"previous",id:todo.id,halo:todo.hala})}>Previous</button>}
-                    {next && <button className="next" onClick={() => dispatch({type:"next",id:todo.id,halo:todo.hala})}>Next</button>}
+                    {previous && <button className="previous" onClick={() => dispatch({type:"previous",id:todo.id})}>Previous</button>}
+                    {next && <button className="next" onClick={() => dispatch({type:"next", id:todo.id})}>Next</button>}
                 </div>  
             </div>
         )
